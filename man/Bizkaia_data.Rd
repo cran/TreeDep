@@ -3,12 +3,12 @@
 \docType{data}
 \name{Bizkaia_data}
 \alias{Bizkaia_data}
-\title{Weather and environmental hourly data in Bizkaia}
+\title{Weather and environmental hourly data in Bizkaia province, Spain}
 \format{A data frame with hourly data}
 \usage{
 Bizkaia_data
 }
 \description{
-Weather and air pollution concentration hourly data in Bizkaia (Spain)
+Weather and air pollution concentration hourly data in Bizkaia province (Spain)
 }
 \keyword{datasets}
