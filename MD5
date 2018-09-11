@@ -1,4 +1,4 @@
-a914e7f08fe3ad5aba956c1bc06ad2bf *DESCRIPTION
+b8565f9db7e0365e02ce2d9bd64efdf6 *DESCRIPTION
 c7f503b0d292334619988fdceb10af2c *NAMESPACE
 defec1c3a2f7236ae51620d3cbfc9c17 *R/Bizkaia_data.R
 f34af7f103079d9c3dd74dd5564dc5cd *R/Conc_CO.R
@@ -6,7 +6,7 @@ a1a68ff69bb844c6aaa6f127a44209e7 *R/Conc_NO2.R
 07d5556a9eb297f76b00469f743f851a *R/Conc_O3.R
 157ea289d82578bd495b68ec06a195f3 *R/Conc_PM10.R
 547a92844e092c06bb1742a3403789b4 *R/Conc_SO2.R
-a3ef7ea4cd7339be85df7b3d9aacd1a1 *R/Daylight.R
+043afa2ce041ac3676a9f52d67ca0c9d *R/Daylight.R
 d9dbefbc5229d3cddd163f3222a9d129 *R/Dep_CO.R
 e1fe26866a08d24c15ce4cbad7d80fb1 *R/Dep_CO_a.R
 0a915f06c6e02b544fbf7224d5c62398 *R/Dep_NO2.R
@@ -50,7 +50,7 @@ ea9889680c83ab696a76165fabe8b379 *R/Res_soil.R
 9099899b3ef22eac264d8f2d7c10305f *R/Res_stom_O3.R
 bed1b4a46c2c884320e90c9b0b6ffdf6 *R/Res_stom_SO2.R
 4c3c3531fd0641946223c9e52008b809 *R/TreeDep.R
-c566b0bb7c5014d0379aa01d584809c1 *R/TreeDep_plot.R
+84f2d7af09067045be1e48bde5f25511 *R/TreeDep_plot.R
 bf208f8a9f28baf9b7e9ca881bdf6d06 *data/Bizkaia_data.RData
 c51e6c3dd2a05ed9ff2b2e3b1031d9c3 *man/Bizkaia_data.Rd
 46392820b356d457763a9a2cab751790 *man/Conc_CO.Rd
@@ -58,7 +58,7 @@ e71d1471f21252dc64a64a8d5e69088a *man/Conc_NO2.Rd
 1b16df1ab899ea390ac60335615361a6 *man/Conc_O3.Rd
 0d7d9aef822d013adc4cd02de3914560 *man/Conc_PM10.Rd
 c6b39676c22d642f49a889fdb2ab752e *man/Conc_SO2.Rd
-46c47664f5682a351abcce83c091a18c *man/Daylight.Rd
+f52d44ef1d60327911d034ced3db7de9 *man/Daylight.Rd
 14ebf0aa5a6fabd950381efbbe6495c2 *man/Dep_CO.Rd
 b913b4ebaaa46b20d29820a151ff7d7f *man/Dep_CO_a.Rd
 cdc75a1aef77b98d8c28a6f8ac9ac7c2 *man/Dep_NO2.Rd
@@ -102,4 +102,4 @@ fdb41822e05cae97150cb1858d9bfb8d *man/Res_meso_SO2.Rd
 a4fe39e1c72d8553ded8f5851c82f496 *man/Res_stom_O3.Rd
 9ff85bf9860085d17608967556c982e7 *man/Res_stom_SO2.Rd
 75e6c3473b1a5732b852c9856066d960 *man/TreeDep.Rd
-d686c71e3eaa80a16e2d731e9a17c2a7 *man/TreeDep_plot.Rd
+35224eca2670301dc55484104f037b79 *man/TreeDep_plot.Rd

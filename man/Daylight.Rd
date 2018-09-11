@@ -2,7 +2,7 @@
 % Please edit documentation in R/Daylight.R
 \name{Daylight}
 \alias{Daylight}
-\title{LAI_evergreen - Generates hourly data of leaf and bark area index for evergreen trees in a specific year}
+\title{Daylight - Generates hourly daylight data ("Night" and "Daylight") in a specific year}
 \usage{
 Daylight(shortest_day_sunrise, shortest_day_sunset, longest_day_sunset0, Year)
 }
@@ -16,10 +16,10 @@ Daylight(shortest_day_sunrise, shortest_day_sunset, longest_day_sunset0, Year)
 \item{Year}{Year to generate hourly daylight data (e.g. 2015)}
 }
 \value{
-A dataframe with LAI and BAI hourly values is generated
+A dataframe with hourly daylight values is generated
 }
 \description{
-LAI_evergreen - Generates hourly data of leaf and bark area index for evergreen trees in a specific year
+Daylight - Generates hourly daylight data ("Night" and "Daylight") in a specific year
 }
 \examples{
 

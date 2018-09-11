@@ -1,9 +1,9 @@
-#' LAI_evergreen - Generates hourly data of leaf and bark area index for evergreen trees in a specific year
+#' Daylight - Generates hourly daylight data ("Night" and "Daylight") in a specific year
 #' @param  shortest_day_sunrise Sunrise time in the shortest day in the Northern Hemisphere (December 21) using decimals for minutes (e.g. 8.4)
 #' @param  shortest_day_sunset Sunset time in the shortest day in the Northern Hemisphere (December 21) using decimals for minutes (e.g. 17.8)
 #' @param  longest_day_sunset0 Sunset time in the longest day in the Northern Hemisphere (June 21) using decimals for minutes (e.g. 21.9)
 #' @param  Year Year to generate hourly daylight data (e.g. 2015)
-#' @return A dataframe with LAI and BAI hourly values is generated
+#' @return A dataframe with hourly daylight values is generated
 #' @export
 #' @import "lubridate" "stats"
 #' @importFrom "graphics" "axis" "legend" "lines" "mtext" "par" "plot" "polygon" "points"

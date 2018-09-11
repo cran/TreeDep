@@ -2,7 +2,7 @@
 % Please edit documentation in R/TreeDep_plot.R
 \name{TreeDep_plot}
 \alias{TreeDep_plot}
-\title{TreeDep_plot - Generates a plot for selected variables and dates. The variables that can be plotted are: "Hum", "Pres", "Precip", "Rad", "Temp", "Wind", "BAI", "LAI", "Fric_vel", "Res_aero", "Res_boun_CO2", "Res_soil", "Conc_NO2", "Dep_NO2", "Dep_vel_NO2", "Res_boun_NO2", "Res_cuti_NO2", "Res_stom_NO2", "Res_meso_NO2", "Res_cano_NO2", "Res_Tot_NO2", "Conc_O3", "Dep_O3", "Dep_vel_O3", "Res_boun_O3", "Res_cuti_O3", "Res_stom_O3", "Res_meso_O3", "Res_cano_O3", "Res_Tot_O3", "Conc_SO2", "Dep_SO2", "Dep_vel_SO2", "Res_boun_SO2", "Res_cuti_SO2", "Res_stom_SO2", "Res_meso_SO2", "Res_cano_SO2", "Res_Tot_SO2",  "Conc_CO", "Dep_CO", "Dep_vel_CO", "Res_boun_CO", "Res_cano_CO", "Res_Tot_CO", "Conc_PM10", "Dep_PM10", "Dep_vel_PM10".}
+\title{TreeDep_plot - Generates a plot for selected variables and dates.}
 \usage{
 TreeDep_plot(my_data, variable1, variable2 = "Non-existent", start_month,
   start_day, stop_month, stop_day)
@@ -26,7 +26,10 @@ TreeDep_plot(my_data, variable1, variable2 = "Non-existent", start_month,
 A plot with the variables and dates selected
 }
 \description{
-TreeDep_plot - Generates a plot for selected variables and dates. The variables that can be plotted are: "Hum", "Pres", "Precip", "Rad", "Temp", "Wind", "BAI", "LAI", "Fric_vel", "Res_aero", "Res_boun_CO2", "Res_soil", "Conc_NO2", "Dep_NO2", "Dep_vel_NO2", "Res_boun_NO2", "Res_cuti_NO2", "Res_stom_NO2", "Res_meso_NO2", "Res_cano_NO2", "Res_Tot_NO2", "Conc_O3", "Dep_O3", "Dep_vel_O3", "Res_boun_O3", "Res_cuti_O3", "Res_stom_O3", "Res_meso_O3", "Res_cano_O3", "Res_Tot_O3", "Conc_SO2", "Dep_SO2", "Dep_vel_SO2", "Res_boun_SO2", "Res_cuti_SO2", "Res_stom_SO2", "Res_meso_SO2", "Res_cano_SO2", "Res_Tot_SO2",  "Conc_CO", "Dep_CO", "Dep_vel_CO", "Res_boun_CO", "Res_cano_CO", "Res_Tot_CO", "Conc_PM10", "Dep_PM10", "Dep_vel_PM10".
+TreeDep_plot - Generates a plot for selected variables and dates.
+}
+\details{
+The variables that can be plotted are: "Hum", "Pres", "Precip", "Rad", "Temp", "Wind", "BAI", "LAI", "Fric_vel", "Res_aero", "Res_boun_CO2", "Res_soil", "Conc_NO2", "Dep_NO2", "Dep_vel_NO2", "Res_boun_NO2", "Res_cuti_NO2", "Res_stom_NO2", "Res_meso_NO2", "Res_cano_NO2", "Res_Tot_NO2", "Conc_O3", "Dep_O3", "Dep_vel_O3", "Res_boun_O3", "Res_cuti_O3", "Res_stom_O3", "Res_meso_O3", "Res_cano_O3", "Res_Tot_O3", "Conc_SO2", "Dep_SO2", "Dep_vel_SO2", "Res_boun_SO2", "Res_cuti_SO2", "Res_stom_SO2", "Res_meso_SO2", "Res_cano_SO2", "Res_Tot_SO2",  "Conc_CO", "Dep_CO", "Dep_vel_CO", "Res_boun_CO", "Res_cano_CO", "Res_Tot_CO", "Conc_PM10", "Dep_PM10", "Dep_vel_PM10".
 }
 \examples{
 
