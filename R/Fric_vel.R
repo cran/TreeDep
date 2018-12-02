@@ -1,13 +1,14 @@
 #' Fric_vel - Calculates friction velocity on an hourly basis
 #' @param  x A data frame containing hourly data of weather variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight))
+#' @param  z_0 Roughness length value (m)
 #' @return Hourly data of friction velocity (m s-1)
 #' @export
 #'
 #' @examples
 #'
 #' data(Bizkaia_data)
-#' Fric_vel(x = Bizkaia_data)
-Fric_vel <- function(x){
+#' Fric_vel(x = Bizkaia_data, z_0 = 1)
+Fric_vel <- function(x, z_0 = 1){
   db <- x
 
   db$LAI_Total <- db$LAI + db$BAI
@@ -45,7 +46,7 @@ Fric_vel <- function(x){
   z <- 5 # height of the weather station (m)
   Canopy_height <- 5 # we assume that there are no trees in the weather station (m)
   d <- 0.67*Canopy_height # (m)
-  z_0 <- 1 # roughness length (see wikipedia values) (m)
+  #z_0 <- 1 # roughness length (see wikipedia values) (m)
 
   #### L Monin-Obukhov length,
   Pasquill_db$L_MoninObukhov[Pasquill_db$Category=="A"] <- 1/(-0.0875*(z_0^(-0.1029)))
@@ -57,7 +58,7 @@ Fric_vel <- function(x){
   #table(Pasquill_db$L_MoninObukhov)
 
   # Friction velocity ### Neutral atmosphere (L=0)
-  u_._neutral <- (k*u_z)/(log((z-d/z_0)))
+  u_._neutral <- (k*u_z)/(log((z-(d/Canopy_height)/z_0)))
   Pasquill_db$u_._neutral <- rep(NA, nrow(Pasquill_db))
   Pasquill_db$u_._neutral[Pasquill_db$L_MoninObukhov==0 & !is.na(Pasquill_db$L_MoninObukhov)] <-
     u_._neutral[Pasquill_db$L_MoninObukhov==0 & !is.na(Pasquill_db$L_MoninObukhov)]
@@ -73,9 +74,9 @@ Fric_vel <- function(x){
     2*((tan(x_unstable))^-1)+pi/2
   #2: Friction velocity in an Unstable atmosphere (L<0)
   u_._unstable <- (k*u_z) /
-    (log(((z-d)/z_0)) -
+    (log(((z-(d/Canopy_height))/z_0)) -
        Psi_unstable *
-       ((z-d)/Pasquill_db$L_MoninObukhov) +
+       ((z-(d/Canopy_height))/Pasquill_db$L_MoninObukhov) +
        Psi_unstable *
        ((z_0)/Pasquill_db$L_MoninObukhov))
   Pasquill_db$u_._unstable <- rep(NA, nrow(Pasquill_db))
@@ -110,5 +111,9 @@ Fric_vel <- function(x){
   Pasquill_db$u_. <- rowSums(cbind(Pasquill_db$u_._neutral ,Pasquill_db$u_._stable , Pasquill_db$u_._unstable), na.rm=TRUE)
   Pasquill_db$u_.[is.na(Pasquill_db$u_._neutral) & is.na(Pasquill_db$u_._stable) & is.na(Pasquill_db$u_._unstable)] <- NA
   u_. <- cbind.data.frame(Dates = Pasquill_db$Day, Frict_vel = Pasquill_db$u_.) ### # Friction velocity in neutral, stable and unstable atmospheres
+  if(z_0 > d){
+    warning("Warning: Roughness length (z_0) was too high")
+  }
   return(u_.)
 }
+

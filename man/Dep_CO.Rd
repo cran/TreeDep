@@ -4,10 +4,12 @@
 \alias{Dep_CO}
 \title{Dep_CO - Calculates hourly deposition of CO on vegetation}
 \usage{
-Dep_CO(x)
+Dep_CO(x, z_0 = 1)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of CO concentration and other variables (Dates (e.g. 01/01/2016  00:00:00), Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight), BAI, LAI)}
+
+\item{z_0}{Roughness length value (m)}
 }
 \value{
 Hourly data of deposition of CO on vegetation (g m-2 h-1)
@@ -18,5 +20,5 @@ Dep_CO - Calculates hourly deposition of CO on vegetation
 \examples{
 
 data(Bizkaia_data)
-Dep_CO(x = Bizkaia_data)
+Dep_CO(x = Bizkaia_data, z_0 = 1)
 }

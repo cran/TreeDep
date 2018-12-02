@@ -4,10 +4,14 @@
 \alias{Res_soil}
 \title{Res_soil - Calculates soil resistance on an hourly basis}
 \usage{
-Res_soil(x)
+Res_soil(x, r_soil_inleaf = 2941, r_soil_outleaf = 2941)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of weather and other variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight), BAI, LAI)}
+
+\item{r_soil_inleaf}{Resistance value during in-leaf season}
+
+\item{r_soil_outleaf}{Resistance value during in-leaf season}
 }
 \value{
 Hourly data of soil resistance (s m-1)
@@ -18,5 +22,5 @@ Res_soil - Calculates soil resistance on an hourly basis
 \examples{
 
 data(Bizkaia_data)
-Res_soil(x = Bizkaia_data)
+Res_soil(x = Bizkaia_data, r_soil_inleaf = 2941, r_soil_outleaf = 2941)
 }

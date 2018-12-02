@@ -4,10 +4,12 @@
 \alias{Res_Tot_O3}
 \title{Res_Tot_O3 - Calculates hourly total resistance for O3}
 \usage{
-Res_Tot_O3(x)
+Res_Tot_O3(x, z_0 = 1)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of weather variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight))}
+
+\item{z_0}{Roughness length value (m)}
 }
 \value{
 Hourly data of total resistance for O3 (s m-1)
@@ -18,5 +20,5 @@ Res_Tot_O3 - Calculates hourly total resistance for O3
 \examples{
 
 data(Bizkaia_data)
-Res_Tot_O3(x = Bizkaia_data)
+Res_Tot_O3(x = Bizkaia_data, z_0 = 1)
 }

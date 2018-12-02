@@ -4,10 +4,12 @@
 \alias{Fric_vel}
 \title{Fric_vel - Calculates friction velocity on an hourly basis}
 \usage{
-Fric_vel(x)
+Fric_vel(x, z_0 = 1)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of weather variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight))}
+
+\item{z_0}{Roughness length value (m)}
 }
 \value{
 Hourly data of friction velocity (m s-1)
@@ -18,5 +20,5 @@ Fric_vel - Calculates friction velocity on an hourly basis
 \examples{
 
 data(Bizkaia_data)
-Fric_vel(x = Bizkaia_data)
+Fric_vel(x = Bizkaia_data, z_0 = 1)
 }

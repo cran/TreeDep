@@ -4,10 +4,12 @@
 \alias{Res_aero}
 \title{Res_aero - Calculates aerodynamic resistance on an hourly basis}
 \usage{
-Res_aero(x)
+Res_aero(x, z_0 = 1)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of weather variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight))}
+
+\item{z_0}{Roughness length value (m)}
 }
 \value{
 Hourly data of aerodynamic resistance (s m-1)
@@ -18,6 +20,6 @@ Res_aero - Calculates aerodynamic resistance on an hourly basis
 \examples{
 
 data(Bizkaia_data)
-Res_aero(x = Bizkaia_data)
+Res_aero(x = Bizkaia_data, z_0 = 1)
 
 }

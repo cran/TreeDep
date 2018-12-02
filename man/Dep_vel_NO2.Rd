@@ -4,10 +4,12 @@
 \alias{Dep_vel_NO2}
 \title{Dep_vel_NO2 - Calculates hourly deposition velocity for NO2}
 \usage{
-Dep_vel_NO2(x)
+Dep_vel_NO2(x, z_0 = 1)
 }
 \arguments{
 \item{x}{A data frame containing hourly data of weather variables (e.g. Hum (\%), Pres (kPa), Precip (mm), Rad (W m-2), Temp (C), Wind (m s-1), Daylight (Night or Daylight))}
+
+\item{z_0}{Roughness length value (m)}
 }
 \value{
 Hourly data of deposition velocity for NO2 (m s-1)
@@ -18,5 +20,5 @@ Dep_vel_NO2 - Calculates hourly deposition velocity for NO2
 \examples{
 
 data(Bizkaia_data)
-Dep_vel_NO2(x = Bizkaia_data)
+Dep_vel_NO2(x = Bizkaia_data, z_0 = 1)
 }
